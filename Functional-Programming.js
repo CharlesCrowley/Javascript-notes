@@ -21,6 +21,42 @@ let users = [
   
   console.log(userFullNames); // returns [ 'Susan Steward', 'Daniel Longbottom', 'Jacob Black' ]
   
+// Syntax in the .map() method.
+
+let arr = [2, 3, 5, 7];
+
+arr.map(function(element, index, array){
+    console.log(element);
+    console.log(index);
+    console.log(array);
+    console.log(this);
+}, 80); 
+
+/* output 
+›2
+›0
+›[2, 3, 5, 7]
+›80
+›3
+›1
+›[2, 3, 5, 7]
+›80
+›5
+›2
+›[2, 3, 5, 7]
+›80
+›7
+›3
+›[2, 3, 5, 7]
+›80
+/index.html
+*/
+// without the console logs and using generic this.
+
+arr.map(function(element, index, array){}, this);
+
+
+
 
 /*
 
