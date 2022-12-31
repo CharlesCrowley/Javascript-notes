@@ -157,7 +157,19 @@ argument is unnecessary.
 /*
 
 FILTER
+*/
 
+let winners = ["Anna", "Beth", "Cara"]
+
+let gold = winners.filter((w, index) => index == 0)
+let silver = winners.filter((l, index) => index == 1)
+let bronze = winners.filter((r, index) => index == 2)
+
+console.log(`Gold winner: ${gold}, Silver Winner: ${silver}, Bronze Winner: ${bronze}`)
+
+// "Gold winner: Anna, Silver Winner: Beth, Bronze Winner: Cara"
+
+/*
 REDUCE 
 
 
