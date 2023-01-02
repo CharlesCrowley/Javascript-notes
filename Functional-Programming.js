@@ -183,3 +183,19 @@ function positiveSum(arr) {
    return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
 }
 
+/* 
+EVERY
+
+The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+*/
+
+function checkPositive(arr) {
+  
+
+  return arr.every(val => val > 0);
+  /* OR 
+  return arr.every(function(value) {
+    return value > 0;  */
+  
+}
+checkPositive([1, 2, 3, -4, 5]);
