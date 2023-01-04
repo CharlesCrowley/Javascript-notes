@@ -6,7 +6,7 @@ For example, sumAll([4,1]) should return 10 because sum of all the numbers betwe
 */
 function sumAll(arr) {
   let emptArr = [];
-let addedArr = [];
+  let addedArr = [];
   arr.sort(function(a,b){return a - b}); // sort to put them in ascending order. 
   for (let i = arr[0]; i <= arr[1]; i++) { // A for loop to iterate through the values between the two numbers provided.
     emptArr.push(i); // adding the iterated values to an empty array.
