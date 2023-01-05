@@ -17,3 +17,26 @@ function sumAll(arr) {
   return addedArr // 10 
 }
 sumAll([1, 4]);
+
+/*
+Diff Two Arrays
+Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+Note: You can return the array with its elements in any order.
+*/
+function diffArray(arr1, arr2) {
+  let empt = [];
+  let concat = arr1.concat(arr2);
+  for (let i = 0; i < concat.length; i++) {
+
+    if (arr1.includes(concat[i]) === true && 
+    (arr2.includes(concat[i]) === false)||
+    (arr1.includes(concat[i]) === false &&
+    (arr2.includes(concat[i]) === true))) {
+        empt.push(concat[i]);
+      }
+    }
+    return empt;
+  }
+
+console.log(diffArray([1, 2, 3, 5, 6], [1, 2, 3, 4, 5]))
