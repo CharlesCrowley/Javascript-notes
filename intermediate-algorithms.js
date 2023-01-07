@@ -76,5 +76,21 @@ function destroyer(arr,...args) { // use the spead operator because we are expec
 
 console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5))
 
+// another slution: 
+
+function destroyer(arr, ...valsToRemove) {
+  // The `filter()` method creates a new array with only the elements
+  // that pass the callback function's test
+  return arr.filter(elem => {
+    // The callback function checks if the current element, `elem`,
+    // is not included in the `valsToRemove` array
+    // If it is not included, the function returns `true`,
+    // indicating that the element should be included in the new array
+    // If it is included, the function returns `false`,
+    // indicating that the element should be excluded from the new array
+    return !valsToRemove.includes(elem);
+  });
+}
+
 
 
