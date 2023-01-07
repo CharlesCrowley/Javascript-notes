@@ -62,4 +62,19 @@ You will be provided with an initial array (the first argument in the destroyer 
 Note: You have to use the arguments object.
 */
 
+function destroyer(arr,...args) { // use the spead operator because we are expecting multiple arguments here, but we don't know how many yet. 
+  for (let i = 0; i < arr.length; i++) { // a for loop to iterate through all the elements in the array. 
+    for(let j = 0; j < args.length; j++) { // another for loop this time for the args we pass in. We want to check the array against each arg. 
+      if (arr[i] === args[j]) { // if the item in array is the same as one of the args we...
+        arr.splice(i,1); //...remove it with splice. We want start the removal from the index `i` and take 1 element out.
+        i--; // when we take an element out with split we need to reduce `i` because the array is now shorter. If we didn't then we'd be skipping... 
+      } //... the next element. 
+    } 
+  }
+  return arr
+}
+
+console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5))
+
+
 
