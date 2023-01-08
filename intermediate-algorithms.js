@@ -91,6 +91,21 @@ function destroyer(arr, ...valsToRemove) {
     return !valsToRemove.includes(elem);
   });
 }
+/*
+Spinal Tap Case
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+*/
 
+function spinalCase(str) {
+  str = str.replace(/[ _]/g, '-'); // we want to relace all instances of a space followed by an `_` with a `-`.
+  str = str.replace(/([a-z])([A-Z])/g, '$1-$2') // replace all instances of a lowercase letter followed by a uppercase one with a `-`.
+  return str.toLowerCase();
+}
+
+spinalCase("AllThe-small Things") // "all-the-small-things"
+
+console.log(spinalCase('The_Andy_Griffith_Show')); // "the-andy-griffith-show"
+console.log(spinalCase('This Is Spinal Tap')); // "this-is-spinal-tap"
+console.log(spinalCase('thisIsSpinalTap')); // "this-is-spinal-tap"
 
 
