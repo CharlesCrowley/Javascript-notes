@@ -87,7 +87,7 @@ function destroyer(arr, ...valsToRemove) {
     // If it is not included, the function returns `true`,
     // indicating that the element should be included in the new array
     // If it is included, the function returns `false`,
-    // indicating that the element should be excluded from the new array
+    // indicating that the element should be excluded from the new array.
     return !valsToRemove.includes(elem);
   });
 }
