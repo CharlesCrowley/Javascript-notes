@@ -108,4 +108,25 @@ console.log(spinalCase('The_Andy_Griffith_Show')); // "the-andy-griffith-show"
 console.log(spinalCase('This Is Spinal Tap')); // "this-is-spinal-tap"
 console.log(spinalCase('thisIsSpinalTap')); // "this-is-spinal-tap"
 
+// some more examples of using replace with the $ symbol. 
+
+let str = 'abc123';
+
+// $1 represents the first and only item you are replacing. By using $1 you are repeating it and having it be followed by `.` in this case. 
+let str1 = str.replace(/([a-z])/g, '$1.');
+console.log(str1); // 'a.b.c.123'
+
+// Here you haven't used $ so you are directly replacing the selected items in the string. 
+let str2 = str.replace(/([0-9])/g, '.');
+console.log(str2); //  'abc...'
+
+// the regex is looking for instances of a lowercase letter followed by a number, then replaces the letter with a `.`and maintains 
+// the number witht he use of $2. 
+let str3 = str.replace(/([a-z])([0-9])/g, '.$2');
+console.log(str3); // 'ab.123'
+
+// Changing the order of capitalised letters with lowercase letters. 
+let oStr = "AaBbCc";
+let moStr = oStr.replace(/([A-Z])([a-z])/g, '$2$1' )
+console.log(moStr) // 'aAbBcC'
 
