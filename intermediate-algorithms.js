@@ -202,4 +202,23 @@ For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
 The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 */
 
+function pairElement(str) {
+  let emptyArr = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "G") {
+      emptyArr.push([str[i], "C"])
+    } else if (str[i] === "C") {
+      emptyArr.push([str[i], "G"]) 
+    } else if (str[i] === "A") {
+      emptyArr.push([str[i], "T"])
+    } else if (str[i] === "T") {
+      emptyArr.push([str[i], "A"])    
+    } 
+  }
+  return emptyArr;
+}
+
+console.log(pairElement("GCGAT")); // [ [ 'G', 'C' ], [ 'C', 'G' ], [ 'G', 'C' ], [ 'A', 'T' ], [ 'T', 'A' ] ]
+
+
 
