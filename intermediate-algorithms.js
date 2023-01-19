@@ -233,7 +233,7 @@ function fearNotLetter(str) {
   for (let i = 0; i < alphabet.length; i++) {
     for (let j = 0; j < str.length; j++) {
       if (alphabet[i] === str[j] && alphabet[i + 1] !== str[j + 1] ) {
-        return alphabet[i + 1]
+        return alphabet[i + 1];
       }
     }
   }
