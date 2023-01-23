@@ -89,7 +89,7 @@ function destroyer(arr, ...valsToRemove) {
     // If it is included, the function returns `false`,
     // indicating that the element should be excluded from the new array.
     return !valsToRemove.includes(elem);
-  });
+  });;
 }
 /*
 Spinal Tap Case
