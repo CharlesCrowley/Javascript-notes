@@ -183,7 +183,7 @@ function myReplace(str, before, after) {
     .replace(after[0], after[0].toUpperCase())) // the after arguments is also using the replace method because we want to capitalise it.
   }
   return str.replace(before, after.toLowerCase() ); // what happens if the first letter of before isn't capitalised. We use the toLowerCase() method 
-  // in the cases where the `after` argument is capitalised. 
+  // in the cases where the `after` argument is capitalised
 
 }
 
