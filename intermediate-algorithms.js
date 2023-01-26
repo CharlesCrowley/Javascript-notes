@@ -252,10 +252,10 @@ Check the assertion tests for examples.
 */
 
 function uniteUnique(...arr) {
-  let spreadArr = [].concat(...arr)
-  return spreadArr.filter((item, index) => spreadArr.indexOf(item) === index);
+  let spreadArr = [].concat(...arr) // tried using .join() with  .split() but it returned a single array with one paramenter consisting of all the numbers
+  return spreadArr.filter((item, index) => spreadArr.indexOf(item) === index); //check if the index of the current item is the same as the index we are on.
 
-
+ 
 }
 
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])); // [ 1, 3, 2, 5, 4 ]
