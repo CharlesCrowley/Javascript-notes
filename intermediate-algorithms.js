@@ -275,4 +275,4 @@ function convertHTML(str) {
 }
 
 
-console.log(convertHTML("Schindler's List")); // Schindler&apos;s List
+console.log(convertHTML("Schindler's List")); // returns Schindler&apos;s List
