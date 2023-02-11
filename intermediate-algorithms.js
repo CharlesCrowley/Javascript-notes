@@ -360,4 +360,14 @@ function smallestCommons(arr) {
 }
 smallestCommons([1,5]);
 
+/*
+Steamroller
+Flatten a nested array. You must account for varying levels of nesting.
+*/
+
+function steamrollArray(arr) {
+  return Array.isArray(arr) ? [].concat(...arr.map(steamrollArray)) : arr;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));// [1,2,3,4] 
 
