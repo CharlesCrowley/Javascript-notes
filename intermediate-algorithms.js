@@ -346,7 +346,7 @@ For example, if given 1 and 3, find the smallest common multiple of both 1 and 3
 
 function smallestCommons(arr) {
   arr.sort((a, b) => a - b);
-  let [small, big] = arr;
+  let [small, big] = arr; // destructuring assignemnt => assigns variable small and big to two elements passed into arr. 
 
   let lcm = big;
   for (let i = big - 1; i >= small; i--) {
