@@ -50,3 +50,25 @@ Write a function which takes a ROT13 encoded string as input and returns a decod
 
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 */
+
+function rot13(input) {
+  let output = "";
+
+  for (let char of input) {
+    let charCode = char.charCodeAt(0);
+    console.log(charCode)
+    let shiftedCode = charCode;
+    
+    if (/[A-Z]/.test(char)) {
+      shiftedCode = (charCode - 65 + 13) % 26 + 65;
+    }
+    
+    let shiftedChar = String.fromCharCode(shiftedCode);
+    output += shiftedChar;
+  }
+  
+  return output;
+}
+
+console.log(rot13("HELLO"));
+
